@@ -11,12 +11,6 @@ let to_from = document.querySelector("#to-from") as HTMLInputElement
 let details = document.querySelector("#details") as HTMLInputElement
 let amount = document.querySelector("#amount") as HTMLInputElement
 
-let dummy = new Invoice("invoice", "Header", "here goes description", 200)
-
-let dummy_list = new List_Items(ul)
-dummy_list.render(dummy)
-
-
 form.addEventListener("submit",(e)=>{
     e.preventDefault()
     let list = new List_Items(ul)

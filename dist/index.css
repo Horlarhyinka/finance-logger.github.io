@@ -1,0 +1,90 @@
+h1{
+    text-align: center;
+    display: block;
+    font-size: 34px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: blueviolet;
+
+}
+
+form{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    background-color: lightgray;
+    margin: 30px 0px;
+}
+
+form > div{
+    display: inline-block;
+    margin: 30px 10px;
+}
+
+form label{
+    display: block;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 4px 0px;
+}
+
+form input{
+    height: 25px;
+}
+
+select:focus, input:focus{
+    outline: none;
+}
+
+button{
+    width: 85px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 18px;
+    font-weight: 530;
+    border: none;
+    height: 30px;
+    border-radius: 2px;
+}
+
+p{
+    display: block;
+    width: 100%;
+    margin: 35px 0px;
+    font-size: 16px;
+    font-weight: 530;
+}
+
+ul{
+    margin: 30px 5px;
+    text-align: center;
+    padding: 0px;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    margin: 5px 1px;
+    box-shadow: 2px 2px 8px rgb(224, 224, 224);
+}
+
+li > h4{
+    text-align: left;
+    margin: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: blueviolet;
+}
+
+li > p{
+    text-align: left;
+    margin: 15px;
+    word-wrap: break-word;
+    width: calc(100% - 30px);
+    font-size: 16px;
+    font-weight: 580;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.555);
+}

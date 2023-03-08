@@ -1,24 +1,23 @@
-import { Invoice } from "./classes/invoice.js";
+import { Doc } from "./classes/doc.js";
 import { List_Items } from "./classes/list-item.js";
-import { Payment } from "./classes/payment.js";
 const form = document.querySelector("form");
 const ul = document.querySelector("ul");
 let type = document.querySelector("#type");
 let to_from = document.querySelector("#to-from");
 let details = document.querySelector("#details");
 let amount = document.querySelector("#amount");
-let dummy = new Invoice("invoice", "Header", "here goes description", 200);
-let dummy_list = new List_Items(ul);
-dummy_list.render(dummy);
+const createInvoice = (to_from, details, amount) => new Doc("invoice", to_from, details, amount);
+const createPayment = (to_from, details, amount) => new Doc("payment", to_from, details, amount);
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     let list = new List_Items(ul);
     let doc;
+    const options = [to_from.value, details.value, amount.valueAsNumber];
     if (type.value == "invoice") {
-        doc = new Invoice(type.value, to_from.value, details.value, amount.valueAsNumber);
+        doc = createInvoice(...options);
     }
     else {
-        doc = new Payment(type.value, to_from.value, details.value, amount.valueAsNumber);
+        doc = createPayment(...options);
     }
     list.render(doc);
     form.reset();

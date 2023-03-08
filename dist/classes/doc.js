@@ -4,6 +4,7 @@ export class Doc {
         this.to_from = to_from;
         this.description = description;
         this.amount = amount;
-        this.format = () => `${this.to_from} owes ${this.amount} for ${this.description}`;
+        this.phrase = this.type == "invoice" ? "owes" : "is owed";
+        this.format = () => `${this.to_from} ${this.phrase} ${this.amount} for ${this.description}`;
     }
 }
